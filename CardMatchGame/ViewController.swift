@@ -13,10 +13,12 @@ class ViewController: UIViewController,UICollectionViewDelegate,UICollectionView
     @IBOutlet var collectionView : UICollectionView!
     
     
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-    }
+        
+}
     
     func numberOfSections(in collectionView: UICollectionView) -> Int {
         return 1
@@ -28,18 +30,14 @@ class ViewController: UIViewController,UICollectionViewDelegate,UICollectionView
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cardcell", for: indexPath) as! CardsCollectionViewCell
-        cell.cardView.layer.backgroundColor = getRandomColor().cgColor
+        if let product = products?[indexPath.item] {
+              cell.cardImage.downloaded(from: product)
+        }
         return cell
     }
-    //MARK - Randome color generator.
-    
-    func random() -> CGFloat{
-        
-        return CGFloat(arc4random()) /  CGFloat(UInt32.max)
-    }
-    func getRandomColor() -> UIColor {
-        return UIColor(red: random(), green: random(), blue: random(), alpha: 1)
-    }
+   
     
 }
+
+
 

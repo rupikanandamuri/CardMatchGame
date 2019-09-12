@@ -11,5 +11,5 @@ import UIKit
 class CardsCollectionViewCell: UICollectionViewCell {
     
     @IBOutlet var  cardView : UIView!
-    
+    @IBOutlet var cardImage : UIImageView!
 }

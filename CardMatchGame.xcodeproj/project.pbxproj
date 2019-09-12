@@ -13,6 +13,8 @@
 		0B416F03232868D40057CDB6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0B416F02232868D40057CDB6 /* Assets.xcassets */; };
 		0B416F06232868D40057CDB6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0B416F04232868D40057CDB6 /* LaunchScreen.storyboard */; };
 		0B416F0E23286D3A0057CDB6 /* CardsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B416F0D23286D3A0057CDB6 /* CardsCollectionViewCell.swift */; };
+		0B7324732329D8110033C807 /* CardManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B7324722329D8110033C807 /* CardManager.swift */; };
+		0B7324772329E28C0033C807 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B7324762329E28C0033C807 /* FirstViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,8 @@
 		0B416F05232868D40057CDB6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0B416F07232868D40057CDB6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0B416F0D23286D3A0057CDB6 /* CardsCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardsCollectionViewCell.swift; sourceTree = "<group>"; };
+		0B7324722329D8110033C807 /* CardManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardManager.swift; sourceTree = "<group>"; };
+		0B7324762329E28C0033C807 /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +62,8 @@
 			children = (
 				0B416EFB232868CF0057CDB6 /* AppDelegate.swift */,
 				0B416EFD232868CF0057CDB6 /* ViewController.swift */,
+				0B7324762329E28C0033C807 /* FirstViewController.swift */,
+				0B7324722329D8110033C807 /* CardManager.swift */,
 				0B416F0D23286D3A0057CDB6 /* CardsCollectionViewCell.swift */,
 				0B416EFF232868CF0057CDB6 /* Main.storyboard */,
 				0B416F02232868D40057CDB6 /* Assets.xcassets */,
@@ -138,7 +144,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0B7324772329E28C0033C807 /* FirstViewController.swift in Sources */,
 				0B416EFE232868CF0057CDB6 /* ViewController.swift in Sources */,
+				0B7324732329D8110033C807 /* CardManager.swift in Sources */,
 				0B416EFC232868CF0057CDB6 /* AppDelegate.swift in Sources */,
 				0B416F0E23286D3A0057CDB6 /* CardsCollectionViewCell.swift in Sources */,
 			);
