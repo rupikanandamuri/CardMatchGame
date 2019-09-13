@@ -10,6 +10,7 @@ import UIKit
 
 class CardsCollectionViewCell: UICollectionViewCell {
     
-    @IBOutlet var  cardView : UIView!
-    @IBOutlet var cardImage : UIImageView!
+    @IBOutlet var  cardBackView : UIView!
+    @IBOutlet var cardIcon : UIImageView!
+     @IBOutlet var cardCoverIcon : UIImageView!
 }

@@ -1,0 +1,6 @@
+framework module Pods_CardMatchGame {
+  umbrella header "Pods-CardMatchGame-umbrella.h"
+
+  export *
+  module * { export * }
+}

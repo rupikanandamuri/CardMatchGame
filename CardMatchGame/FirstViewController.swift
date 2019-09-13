@@ -10,13 +10,54 @@ import UIKit
 
 class FirstViewController: UIViewController {
 
+    @IBOutlet var easyViewHolder : UIView!
+     @IBOutlet var mediumViewHolder : UIView!
+     @IBOutlet var hardViewHolder : UIView!
+     @IBOutlet var insaneViewHolder : UIView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        loadCards()
     }
     
-
+    //when selected type of mode
+    @IBAction func gameModeClicked(_ sender : UIButton){
+        clearBorders()
+        sender.superview?.layer.borderWidth = 2.0
+        sender.superview?.layer.cornerRadius = 5.0
+        sender.superview?.layer.borderColor = UIColor(red: 105/255, green: 141/255, blue: 72/255, alpha: 1.0).cgColor
+        if sender.tag == 1{
+            CardManager.shared.gameMode = CardManager.GameMode.Easy
+        }
+        if sender.tag == 2{
+            CardManager.shared.gameMode = CardManager.GameMode.Medium
+        }
+        if sender.tag == 3{
+            CardManager.shared.gameMode = CardManager.GameMode.Hard
+        }
+        if sender.tag == 4{
+            CardManager.shared.gameMode = CardManager.GameMode.Insane
+        }
+    }
+    //when paly button clicked()
+    @IBAction func playButtonClicked(){
+        performSegue(withIdentifier: "play", sender: nil)
+    }
+    
+    //to clear borders
+    func clearBorders(){
+        easyViewHolder.layer.borderWidth = 0
+        mediumViewHolder.layer.borderWidth = 0
+         hardViewHolder.layer.borderWidth = 0
+         insaneViewHolder.layer.borderWidth = 0
+    }
+    
+    func loadCards(){
+        //here we are getting cards from card manger class get card function.
+     CardManager.shared.getCards()
+    }
     /*
     // MARK: - Navigation
 

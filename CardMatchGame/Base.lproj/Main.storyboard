@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="amL-Lx-vlD">
     <device id="retina4_7" orientation="landscape">
         <adaptation id="fullscreen"/>
     </device>
@@ -31,48 +31,111 @@
                                 <state key="normal" title="play">
                                     <color key="titleColor" red="0.58833456039428711" green="0.74850296974182129" blue="0.27725321054458618" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="playButtonClicked" destination="amL-Lx-vlD" eventType="touchUpInside" id="r4E-Qp-fA8"/>
+                                </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="44" translatesAutoresizingMaskIntoConstraints="NO" id="Z6J-5s-iet">
                                 <rect key="frame" x="20" y="295" width="627" height="60"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kRc-Ba-33k">
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="i0Z-1D-xfE" userLabel="Easy view holder">
                                         <rect key="frame" x="0.0" y="0.0" width="124" height="60"/>
-                                        <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="30"/>
-                                        <state key="normal" title="Easy">
-                                            <color key="titleColor" red="0.58833456039999998" green="0.74850296969999996" blue="0.27725321050000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        </state>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pnn-6A-gWh">
+                                        <subviews>
+                                            <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kRc-Ba-33k">
+                                                <rect key="frame" x="10" y="10" width="104" height="40"/>
+                                                <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="30"/>
+                                                <state key="normal" title="Easy">
+                                                    <color key="titleColor" red="0.58833456039999998" green="0.74850296969999996" blue="0.27725321050000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="gameModeClicked:" destination="amL-Lx-vlD" eventType="touchUpInside" id="ued-da-CUa"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <color key="backgroundColor" red="0.98385697599999999" green="0.96875423189999998" blue="0.92358165979999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstItem="kRc-Ba-33k" firstAttribute="leading" secondItem="i0Z-1D-xfE" secondAttribute="leading" constant="10" id="4eK-5Q-b6c"/>
+                                            <constraint firstAttribute="bottom" secondItem="kRc-Ba-33k" secondAttribute="bottom" constant="10" id="OfQ-p7-vOd"/>
+                                            <constraint firstItem="kRc-Ba-33k" firstAttribute="top" secondItem="i0Z-1D-xfE" secondAttribute="top" constant="10" id="cLN-Lw-Ftm"/>
+                                            <constraint firstAttribute="trailing" secondItem="kRc-Ba-33k" secondAttribute="trailing" constant="10" id="xDm-Ij-zPl"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LYI-ic-R1I" userLabel="Medium view holder">
                                         <rect key="frame" x="168" y="0.0" width="123.5" height="60"/>
-                                        <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="30"/>
-                                        <state key="normal" title="Medium">
-                                            <color key="titleColor" red="0.58833456039999998" green="0.74850296969999996" blue="0.27725321050000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        </state>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fgJ-AF-cni">
+                                        <subviews>
+                                            <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hwr-xj-nvu">
+                                                <rect key="frame" x="10" y="10" width="103.5" height="40"/>
+                                                <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="30"/>
+                                                <state key="normal" title="Medium">
+                                                    <color key="titleColor" red="0.58833456039999998" green="0.74850296969999996" blue="0.27725321050000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="gameModeClicked:" destination="amL-Lx-vlD" eventType="touchUpInside" id="d5e-Ui-okl"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <color key="backgroundColor" red="0.98385697599999999" green="0.96875423189999998" blue="0.92358165979999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="trailing" secondItem="Hwr-xj-nvu" secondAttribute="trailing" constant="10" id="FlS-M6-dTc"/>
+                                            <constraint firstItem="Hwr-xj-nvu" firstAttribute="top" secondItem="LYI-ic-R1I" secondAttribute="top" constant="10" id="POw-pG-T0X"/>
+                                            <constraint firstItem="Hwr-xj-nvu" firstAttribute="leading" secondItem="LYI-ic-R1I" secondAttribute="leading" constant="10" id="bbf-15-wM9"/>
+                                            <constraint firstAttribute="bottom" secondItem="Hwr-xj-nvu" secondAttribute="bottom" constant="10" id="zc3-jH-M94"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gYn-en-Zyi" userLabel="Hard view holder">
                                         <rect key="frame" x="335.5" y="0.0" width="124" height="60"/>
-                                        <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="30"/>
-                                        <state key="normal" title="Hard">
-                                            <color key="titleColor" red="0.58833456039999998" green="0.74850296969999996" blue="0.27725321050000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        </state>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uj8-Le-rV1">
+                                        <subviews>
+                                            <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UMb-On-Rbd">
+                                                <rect key="frame" x="10" y="10" width="104" height="40"/>
+                                                <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="30"/>
+                                                <state key="normal" title="Hard">
+                                                    <color key="titleColor" red="0.58833456039999998" green="0.74850296969999996" blue="0.27725321050000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="gameModeClicked:" destination="amL-Lx-vlD" eventType="touchUpInside" id="pNp-AB-0ks"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <color key="backgroundColor" red="0.98385697599999999" green="0.96875423189999998" blue="0.92358165979999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="bottom" secondItem="UMb-On-Rbd" secondAttribute="bottom" constant="10" id="Le0-uU-G5D"/>
+                                            <constraint firstItem="UMb-On-Rbd" firstAttribute="leading" secondItem="gYn-en-Zyi" secondAttribute="leading" constant="10" id="Q2I-ZX-uG8"/>
+                                            <constraint firstItem="UMb-On-Rbd" firstAttribute="top" secondItem="gYn-en-Zyi" secondAttribute="top" constant="10" id="Tyu-v5-sRY"/>
+                                            <constraint firstAttribute="trailing" secondItem="UMb-On-Rbd" secondAttribute="trailing" constant="10" id="wkg-UP-SR4"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="x9f-wm-KZh" userLabel="insance view holder">
                                         <rect key="frame" x="503.5" y="0.0" width="123.5" height="60"/>
-                                        <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="30"/>
-                                        <state key="normal" title="Insane!">
-                                            <color key="titleColor" red="0.58833456039999998" green="0.74850296969999996" blue="0.27725321050000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        </state>
-                                    </button>
+                                        <subviews>
+                                            <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pjX-hb-uin">
+                                                <rect key="frame" x="10" y="10" width="103.5" height="40"/>
+                                                <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="30"/>
+                                                <state key="normal" title="Insane!">
+                                                    <color key="titleColor" red="0.58833456039999998" green="0.74850296969999996" blue="0.27725321050000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="gameModeClicked:" destination="amL-Lx-vlD" eventType="touchUpInside" id="HQh-gX-z2w"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <color key="backgroundColor" red="0.98385697599999999" green="0.96875423189999998" blue="0.92358165979999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="bottom" secondItem="pjX-hb-uin" secondAttribute="bottom" constant="10" id="Au9-wJ-fSa"/>
+                                            <constraint firstAttribute="trailing" secondItem="pjX-hb-uin" secondAttribute="trailing" constant="10" id="Mp3-Nc-hii"/>
+                                            <constraint firstItem="pjX-hb-uin" firstAttribute="top" secondItem="x9f-wm-KZh" secondAttribute="top" constant="10" id="Wi5-QF-Yml"/>
+                                            <constraint firstItem="pjX-hb-uin" firstAttribute="leading" secondItem="x9f-wm-KZh" secondAttribute="leading" constant="10" id="pOc-zL-M4u"/>
+                                        </constraints>
+                                    </view>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstItem="Pnn-6A-gWh" firstAttribute="width" secondItem="kRc-Ba-33k" secondAttribute="width" id="RoI-jd-rtq"/>
+                                    <constraint firstItem="x9f-wm-KZh" firstAttribute="width" secondItem="i0Z-1D-xfE" secondAttribute="width" id="2co-VX-X3k"/>
+                                    <constraint firstItem="LYI-ic-R1I" firstAttribute="width" secondItem="i0Z-1D-xfE" secondAttribute="width" id="4LH-El-AJs"/>
+                                    <constraint firstItem="gYn-en-Zyi" firstAttribute="width" secondItem="i0Z-1D-xfE" secondAttribute="width" id="O2F-fq-NzV"/>
                                     <constraint firstAttribute="height" constant="60" id="iKN-5i-jVP"/>
-                                    <constraint firstItem="uj8-Le-rV1" firstAttribute="width" secondItem="kRc-Ba-33k" secondAttribute="width" id="ieK-L3-ZOL"/>
-                                    <constraint firstItem="fgJ-AF-cni" firstAttribute="width" secondItem="kRc-Ba-33k" secondAttribute="width" id="we6-aX-TrW"/>
                                 </constraints>
                             </stackView>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" red="0.98385697603225708" green="0.96875423192977905" blue="0.92358165979385376" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="rAJ-XQ-Eh1" firstAttribute="trailing" secondItem="Z6J-5s-iet" secondAttribute="trailing" constant="20" id="24D-a3-ysx"/>
                             <constraint firstItem="Z6J-5s-iet" firstAttribute="leading" secondItem="rAJ-XQ-Eh1" secondAttribute="leading" constant="20" id="3La-Zy-gKJ"/>
@@ -85,6 +148,10 @@
                         <viewLayoutGuide key="safeArea" id="rAJ-XQ-Eh1"/>
                     </view>
                     <connections>
+                        <outlet property="easyViewHolder" destination="i0Z-1D-xfE" id="eQx-UB-qzG"/>
+                        <outlet property="hardViewHolder" destination="gYn-en-Zyi" id="OfK-R1-P71"/>
+                        <outlet property="insaneViewHolder" destination="x9f-wm-KZh" id="9SG-YO-rCD"/>
+                        <outlet property="mediumViewHolder" destination="LYI-ic-R1I" id="4fB-7P-P45"/>
                         <segue destination="BYZ-38-t0r" kind="show" identifier="play" id="qK5-Mf-pL3"/>
                     </connections>
                 </viewController>
@@ -149,8 +216,9 @@
                                             <constraint firstItem="dB7-ia-39D" firstAttribute="top" secondItem="Vj3-G0-diD" secondAttribute="top" constant="5" id="pi0-Zl-TPq"/>
                                         </constraints>
                                         <connections>
-                                            <outlet property="cardImage" destination="bgv-z1-wd2" id="shK-L5-hTT"/>
-                                            <outlet property="cardView" destination="dB7-ia-39D" id="rp4-HQ-t6b"/>
+                                            <outlet property="cardBackView" destination="dB7-ia-39D" id="HsE-i1-i9F"/>
+                                            <outlet property="cardCoverIcon" destination="MHK-Jo-YJE" id="fKj-Fa-XTV"/>
+                                            <outlet property="cardIcon" destination="bgv-z1-wd2" id="m9A-2C-Egd"/>
                                         </connections>
                                     </collectionViewCell>
                                 </cells>
