@@ -10,11 +10,13 @@ import Foundation
 class ScoreManager {
     
     static let shared = ScoreManager()
+    
     var currentScore = 0
+    
     func resetScore(){
         currentScore = 0
     }
     func newPairFound(){
-        currentScore = 1
+        currentScore  += 1
     }
 }

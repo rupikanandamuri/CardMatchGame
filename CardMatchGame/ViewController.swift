@@ -133,6 +133,9 @@ class ViewController: UIViewController,UICollectionViewDelegate,UICollectionView
             let card1 = selectedCards[0]
             let card2 = selectedCards[1]
             if card1.cardName == card2.cardName{
+                //added score 
+                scoreManager.newPairFound()
+                updateScoreLabel()
                  removeMatchedPairs([card1.cardIndexPath!,card2.cardIndexPath!])
                 //to show alert the game is done
                 checkGameProcess()

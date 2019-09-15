@@ -189,12 +189,14 @@
                                                     <subviews>
                                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="bgv-z1-wd2" userLabel="card icon">
                                                             <rect key="frame" x="0.0" y="0.0" width="81" height="113"/>
+                                                            <color key="tintColor" red="0.98385697599999999" green="0.96875423189999998" blue="0.92358165979999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         </imageView>
                                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="shopify_placeholder" translatesAutoresizingMaskIntoConstraints="NO" id="MHK-Jo-YJE" userLabel="card cover icon">
                                                             <rect key="frame" x="0.0" y="0.0" width="81" height="113"/>
                                                         </imageView>
                                                     </subviews>
-                                                    <color key="backgroundColor" red="0.95743604270000005" green="0.42614403270000001" blue="0.62231552990000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <color key="backgroundColor" red="0.98385697599999999" green="0.96875423189999998" blue="0.92358165979999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <color key="tintColor" red="0.98385697599999999" green="0.96875423189999998" blue="0.92358165979999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <constraints>
                                                         <constraint firstItem="bgv-z1-wd2" firstAttribute="top" secondItem="dB7-ia-39D" secondAttribute="top" id="2qK-7b-yX4"/>
                                                         <constraint firstAttribute="bottom" secondItem="bgv-z1-wd2" secondAttribute="bottom" id="6fk-pH-fID"/>
