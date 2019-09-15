@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="amL-Lx-vlD">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="amL-Lx-vlD">
     <device id="retina4_7" orientation="landscape">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -236,6 +236,9 @@
                                         <state key="normal" title="stop">
                                             <color key="titleColor" red="0.58833456039999998" green="0.74850296969999996" blue="0.27725321050000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
+                                        <connections>
+                                            <action selector="stopClicked" destination="BYZ-38-t0r" eventType="touchUpInside" id="5b2-RP-CIp"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hJ7-3a-lch">
                                         <rect key="frame" x="537" y="0.0" width="48" height="30"/>
@@ -243,6 +246,9 @@
                                         <state key="normal" title="shuffle">
                                             <color key="titleColor" red="0.58833456039999998" green="0.74850296969999996" blue="0.27725321050000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
+                                        <connections>
+                                            <action selector="shuffleClicked" destination="BYZ-38-t0r" eventType="touchUpInside" id="a0e-12-54c"/>
+                                        </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Timer" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LH5-TI-9ED">
                                         <rect key="frame" x="303" y="0.0" width="41.5" height="30"/>
@@ -309,6 +315,8 @@
                     </view>
                     <connections>
                         <outlet property="collectionView" destination="Ef3-GV-Du5" id="Pbi-CI-CF9"/>
+                        <outlet property="scoreLabel" destination="aN8-6X-9Uj" id="qDm-mn-Xkc"/>
+                        <outlet property="timerLabel" destination="arm-eS-MIT" id="IPO-c4-hBG"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
