@@ -51,11 +51,31 @@ class CardManager {
     func getMediumMode() -> [Card]{
          var mediumArray = [Card]()
         if let cards = cards{
-            for card in cards{
-                if card.cardName == "Plate" || card.cardName == "Computer" || card.cardName == "Shoes" || card.cardName == "Table"{
-                       mediumArray.append(card)
+            let plateArray = cards.filter({$0.cardName == "plate"})
+            if let plateCard = plateArray.first{
+                for _ in 0...5{
+                        mediumArray.append(plateCard)
                 }
             }
+            let compArray = cards.filter({$0.cardName == "computer"})
+            if let compCard = compArray.first{
+                for _ in 0...5{
+                    mediumArray.append(compCard)
+                }
+            }
+            let shoeArray = cards.filter({$0.cardName == "shoes"})
+            if let shoeCard = shoeArray.first{
+                for _ in 0...5{
+                    mediumArray.append(shoeCard)
+                }
+            }
+            let tableArray = cards.filter({$0.cardName == "Table"})
+            if let tableCard = tableArray.first{
+                for _ in 0...5{
+                    mediumArray.append(tableCard)
+                }
+            }
+            
         }
         return mediumArray
     }
@@ -63,10 +83,41 @@ class CardManager {
     func getHardMode() -> [Card]{
         var hardArray = [Card]()
         if let cards = cards{
-            for card in cards{
-                if card.cardName == "Bag" || card.cardName == "Watch" || card.cardName == "Chair" || card.cardName == "Pants" || card.cardName == "Knife" || card.cardName == "Lamp"{
-                    hardArray.append(card)
+                let BagArray = cards.filter({$0.cardName == "Bag"})
+                if let bagCard = BagArray.first{
+                    for _ in 0...5{
+                        hardArray.append(bagCard)
+                    }
                 }
+                let  watchArray = cards.filter({$0.cardName == "Watch"})
+                if let  watchCard = watchArray.first{
+                    for _ in 0...5{
+                        hardArray.append(watchCard)
+                    }
+                }
+                let  chairArray = cards.filter({$0.cardName == "chair"})
+                if let chairCard = chairArray.first{
+                    for _ in 0...5{
+                        hardArray.append(chairCard)
+                    }
+                }
+                let pantsArray = cards.filter({$0.cardName == "Pants"})
+                if let pantsCard = pantsArray.first{
+                    for _ in 0...5{
+                        hardArray.append(pantsCard)
+                    }
+                }
+                let knifeArray = cards.filter({$0.cardName == "Knife"})
+                if let kinfeCard = knifeArray.first{
+                    for _ in 0...5{
+                        hardArray.append(kinfeCard)
+                    }
+                }
+                let lampArray = cards.filter({$0.cardName == "Lamp"})
+                if let lampCard = lampArray.first{
+                    for _ in 0...5{
+                        hardArray.append(lampCard)
+                    }
             }
         }
         return hardArray

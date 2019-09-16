@@ -47,15 +47,20 @@ class ViewController: UIViewController,UICollectionViewDelegate,UICollectionView
         
         if CardManager.shared.gameMode == CardManager.GameMode.Easy {
             dataSource = CardManager.shared.getEasyMode()
+            scoreManager.resetScore()
+        
         }
         if CardManager.shared.gameMode == CardManager.GameMode.Medium {
             dataSource = CardManager.shared.getMediumMode()
+               scoreManager.resetScore()
         }
         if CardManager.shared.gameMode == CardManager.GameMode.Hard {
             dataSource = CardManager.shared.getHardMode()
+               scoreManager.resetScore()
         }
         if CardManager.shared.gameMode == CardManager.GameMode.Insane {
             dataSource = CardManager.shared.getInsaneMode()
+            scoreManager.resetScore()
         }
         startTimer()
     }
@@ -273,7 +278,7 @@ class ViewController: UIViewController,UICollectionViewDelegate,UICollectionView
         if CardManager.shared.gameMode == CardManager.GameMode.Hard{
             return CGSize(width: 80, height: 80)
         }
-        return CGSize(width: 60, height: 60)
+        return CGSize(width: 65, height: 65)
     }
    
     
