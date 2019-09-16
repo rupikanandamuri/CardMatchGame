@@ -24,9 +24,9 @@ class CardManager {
     
     var gameMode : GameMode?
     
-   //for easy mode
+    //for easy mode
     func getEasyMode() -> [Card]{
-       var easyArray = [Card]()
+        var easyArray = [Card]()
         //here cards contain all the data from joson
         if let cards = cards{
             
@@ -49,21 +49,21 @@ class CardManager {
     
     //for Medium mode
     func getMediumMode() -> [Card]{
-         var mediumArray = [Card]()
+        var mediumArray = [Card]()
         if let cards = cards{
-            let plateArray = cards.filter({$0.cardName == "plate"})
+            let plateArray = cards.filter({$0.cardName == "Plate"})
             if let plateCard = plateArray.first{
                 for _ in 0...5{
-                        mediumArray.append(plateCard)
+                    mediumArray.append(plateCard)
                 }
             }
-            let compArray = cards.filter({$0.cardName == "computer"})
+            let compArray = cards.filter({$0.cardName == "Computer"})
             if let compCard = compArray.first{
                 for _ in 0...5{
                     mediumArray.append(compCard)
                 }
             }
-            let shoeArray = cards.filter({$0.cardName == "shoes"})
+            let shoeArray = cards.filter({$0.cardName == "Shoes"})
             if let shoeCard = shoeArray.first{
                 for _ in 0...5{
                     mediumArray.append(shoeCard)
@@ -77,62 +77,69 @@ class CardManager {
             }
             
         }
+        
+        //shud return 24 cards check i
         return mediumArray
     }
     //for hard mode
     func getHardMode() -> [Card]{
         var hardArray = [Card]()
         if let cards = cards{
-                let BagArray = cards.filter({$0.cardName == "Bag"})
-                if let bagCard = BagArray.first{
-                    for _ in 0...5{
-                        hardArray.append(bagCard)
-                    }
+            let BagArray = cards.filter({$0.cardName == "Bag"})
+            if let bagCard = BagArray.first{
+                for _ in 0...5{
+                    hardArray.append(bagCard)
                 }
-                let  watchArray = cards.filter({$0.cardName == "Watch"})
-                if let  watchCard = watchArray.first{
-                    for _ in 0...5{
-                        hardArray.append(watchCard)
-                    }
+            }
+            let  watchArray = cards.filter({$0.cardName == "Watch"})
+            if let  watchCard = watchArray.first{
+                for _ in 0...5{
+                    hardArray.append(watchCard)
                 }
-                let  chairArray = cards.filter({$0.cardName == "chair"})
-                if let chairCard = chairArray.first{
-                    for _ in 0...5{
-                        hardArray.append(chairCard)
-                    }
+            }
+            let  chairArray = cards.filter({$0.cardName == "Chair"})
+            if let chairCard = chairArray.first{
+                for _ in 0...5{
+                    hardArray.append(chairCard)
                 }
-                let pantsArray = cards.filter({$0.cardName == "Pants"})
-                if let pantsCard = pantsArray.first{
-                    for _ in 0...5{
-                        hardArray.append(pantsCard)
-                    }
+            }
+            let pantsArray = cards.filter({$0.cardName == "Pants"})
+            if let pantsCard = pantsArray.first{
+                for _ in 0...5{
+                    hardArray.append(pantsCard)
                 }
-                let knifeArray = cards.filter({$0.cardName == "Knife"})
-                if let kinfeCard = knifeArray.first{
-                    for _ in 0...5{
-                        hardArray.append(kinfeCard)
-                    }
+            }
+            let knifeArray = cards.filter({$0.cardName == "Knife"})
+            if let kinfeCard = knifeArray.first{
+                for _ in 0...5{
+                    hardArray.append(kinfeCard)
                 }
-                let lampArray = cards.filter({$0.cardName == "Lamp"})
-                if let lampCard = lampArray.first{
-                    for _ in 0...5{
-                        hardArray.append(lampCard)
-                    }
+            }
+            let lampArray = cards.filter({$0.cardName == "Lamp"})
+            if let lampCard = lampArray.first{
+                for _ in 0...5{
+                    hardArray.append(lampCard)
+                }
             }
         }
-        return hardArray
+        return hardArray.shuffled()
     }
     //for insance mode
     func getInsaneMode()-> [Card]{
         var insaneArray = [Card]()
+        //insaneModeProducts
         if let cards = cards{
-            for card in cards{
-                if card.cardName == "Coat" || card.cardName == "Hat" || card.cardName == "Wallet" || card.cardName == "Bench" || card.cardName == "Car" || card.cardName == "Bottle" || card.cardName == "Gloves"{
-                    insaneArray.append(card)
+            
+            for cardName in insaneModeProducts{
+                let  temp = cards.filter({$0.cardName == cardName})
+                if let insaneCard = temp.first{
+                    for _ in 0...5{
+                        insaneArray.append(insaneCard)
+                    }
                 }
             }
         }
-        return insaneArray
+        return insaneArray.shuffled()
     }
     
     func getCards(){
@@ -143,33 +150,33 @@ class CardManager {
             let link = "https://shopicruit.myshopify.com/admin/products.json?page=\(i)&access_token=c32313df0d0ef512ca64d5b336a0d7c6"
             if let url = URL(string: link){
                 URLSession.shared.dataTask(with:  url) { (data, response, error) in
-                   if error != nil {
-                            print("error")
+                    if error != nil {
+                        print("error")
                     }else{
-                            print(data ?? "data is not downloaded")
-                            print(response ?? "server not connected")
-                            do{
-                                if let json = try JSONSerialization.jsonObject(with: data!, options: JSONSerialization.ReadingOptions()) as? [String : Any]{
-                                    if let products = json["products"] as? [[String : Any]] {
-                                        for product in products{
-                                            var card = Card()
-                                            card.cardName = product["product_type"] as? String
-                                            if let imgsrc = product["image"] as? [String : Any]{
-                                                  card.cardImage = imgsrc["src"] as? String
-                                            }
-                                            self.cards?.append(card)
+                        print(data ?? "data is not downloaded")
+                        print(response ?? "server not connected")
+                        do{
+                            if let json = try JSONSerialization.jsonObject(with: data!, options: JSONSerialization.ReadingOptions()) as? [String : Any]{
+                                if let products = json["products"] as? [[String : Any]] {
+                                    for product in products{
+                                        var card = Card()
+                                        card.cardName = product["product_type"] as? String
+                                        if let imgsrc = product["image"] as? [String : Any]{
+                                            card.cardImage = imgsrc["src"] as? String
                                         }
+                                        self.cards?.append(card)
                                     }
-                                    
                                 }
-                            }catch {
-                                print("error")
-                           }
+                                
+                            }
+                        }catch {
+                            print("error")
                         }
-                     }.resume()
-                 }
-             }
-       }
+                    }
+                    }.resume()
+            }
+        }
+    }
     
 }
 struct Card : Hashable {

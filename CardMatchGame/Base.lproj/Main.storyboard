@@ -168,7 +168,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Ef3-GV-Du5">
-                                <rect key="frame" x="10" y="30" width="647" height="335"/>
+                                <rect key="frame" x="0.0" y="30" width="667" height="345"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="JPa-V7-cT1">
                                     <size key="itemSize" width="91" height="123"/>
@@ -230,10 +230,10 @@
                                 </connections>
                             </collectionView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8Zi-7A-rQX">
-                                <rect key="frame" x="10" y="0.0" width="647" height="30"/>
+                                <rect key="frame" x="0.0" y="0.0" width="667" height="30"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="e0h-hH-BPp">
-                                        <rect key="frame" x="595" y="0.0" width="32" height="30"/>
+                                        <rect key="frame" x="615" y="0.0" width="32" height="30"/>
                                         <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="17"/>
                                         <state key="normal" title="stop">
                                             <color key="titleColor" red="0.58833456039999998" green="0.74850296969999996" blue="0.27725321050000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -243,7 +243,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hJ7-3a-lch">
-                                        <rect key="frame" x="537" y="0.0" width="48" height="30"/>
+                                        <rect key="frame" x="557" y="0.0" width="48" height="30"/>
                                         <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="17"/>
                                         <state key="normal" title="shuffle">
                                             <color key="titleColor" red="0.58833456039999998" green="0.74850296969999996" blue="0.27725321050000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -253,13 +253,13 @@
                                         </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Timer" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LH5-TI-9ED">
-                                        <rect key="frame" x="303" y="0.0" width="41.5" height="30"/>
+                                        <rect key="frame" x="313" y="0.0" width="41.5" height="30"/>
                                         <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="17"/>
                                         <color key="textColor" red="0.58833456039999998" green="0.74850296969999996" blue="0.27725321050000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00:00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="arm-eS-MIT">
-                                        <rect key="frame" x="349.5" y="0.0" width="58" height="30"/>
+                                        <rect key="frame" x="359.5" y="0.0" width="58" height="30"/>
                                         <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="17"/>
                                         <color key="textColor" red="0.58833456039999998" green="0.74850296969999996" blue="0.27725321050000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
@@ -307,11 +307,11 @@
                         <constraints>
                             <constraint firstItem="8Zi-7A-rQX" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="Bbz-xd-w3W"/>
                             <constraint firstItem="Ef3-GV-Du5" firstAttribute="top" secondItem="8Zi-7A-rQX" secondAttribute="bottom" id="ULQ-yM-Au3"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Ef3-GV-Du5" secondAttribute="trailing" constant="10" id="cEj-Um-vKN"/>
-                            <constraint firstItem="Ef3-GV-Du5" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="iex-8I-vdN"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Ef3-GV-Du5" secondAttribute="bottom" constant="10" id="mKR-bi-jLb"/>
-                            <constraint firstItem="8Zi-7A-rQX" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="nlC-Ol-fh5"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="8Zi-7A-rQX" secondAttribute="trailing" constant="10" id="wNz-Bc-zt7"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Ef3-GV-Du5" secondAttribute="trailing" id="cEj-Um-vKN"/>
+                            <constraint firstItem="Ef3-GV-Du5" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="iex-8I-vdN"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Ef3-GV-Du5" secondAttribute="bottom" id="mKR-bi-jLb"/>
+                            <constraint firstItem="8Zi-7A-rQX" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="nlC-Ol-fh5"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="8Zi-7A-rQX" secondAttribute="trailing" id="wNz-Bc-zt7"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>

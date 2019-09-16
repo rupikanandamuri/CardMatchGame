@@ -20,6 +20,9 @@ class FirstViewController: UIViewController {
 
         // Do any additional setup after loading the view.
         loadCards()
+        
+        //for default even thought it will go see
+         CardManager.shared.gameMode = CardManager.GameMode.Easy
     }
     
     //when selected type of mode
@@ -43,6 +46,7 @@ class FirstViewController: UIViewController {
     }
     //when paly button clicked()
     @IBAction func playButtonClicked(){
+        
         performSegue(withIdentifier: "play", sender: nil)
     }
     
